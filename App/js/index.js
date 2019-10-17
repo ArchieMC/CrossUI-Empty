@@ -19,7 +19,27 @@ xui.Class('App', 'xui.Module',{
         iniComponents : function(){
             // [[Code created by CrossUI RAD Studio
             var host=this, children=[], append=function(child){children.push(child.get(0));};
-
+            
+            append(
+                xui.create("xui.UI.Button")
+                .setHost(host,"xui_ui_button3")
+                .setDirtyMark(false)
+                .setLeft("5.833333333333333em")
+                .setTop("6.666666666666667em")
+                .setCaption("Button")
+                .onClickDrop([
+                    {
+                        "desc":"Action 1",
+                        "type":"other",
+                        "target":"url",
+                        "args":[ ],
+                        "method":"selectFile",
+                        "onOK":0,
+                        "event":1
+                    }
+                ])
+            );
+            
             return children;
             // ]]Code created by CrossUI RAD Studio
         },
